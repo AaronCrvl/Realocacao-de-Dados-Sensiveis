@@ -46,11 +46,6 @@ bool Fifo::Vazia()
     return 0;
 }
 
-int Fifo::getChave()
-{
-    return this->chave; 
-}
-
 void Fifo::setChave(int c)
 {
     this->chave = c;
@@ -99,21 +94,4 @@ void Fifo::Limpa()
 
     tamanho = 0;
     tras = frente;
-}
-
-void Fifo::Output() {
-    Celula *p;
-    string aux[getTamanho()];
-    int tam = getTamanho();
-
-    for(int i = 0; i < tam; ++i)
-    {
-        p = frente->prox;
-        aux[tam] = p->item.getComando();                 
-    } 
-    for(int i = getTamanho(); i>0; --i)
-    {
-        cout << "Entrou____________  ";
-        cout << aux[i] << endl;
-    }  
 }

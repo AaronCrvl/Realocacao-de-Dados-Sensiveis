@@ -63,7 +63,6 @@ void Comando::Info(char servidor, string dados)
             T_dado += dados[i];
         }
     }
-
     this->comando = T_dado;
     this->Executado = true;
 }

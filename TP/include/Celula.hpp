@@ -9,8 +9,8 @@ using namespace std;
 class Celula
 {    
     public:
-        Celula();
-        void Executa();
+        Celula();        
+        void Executa();        
         
     private:
         Comando item;

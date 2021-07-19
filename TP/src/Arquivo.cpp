@@ -47,6 +47,10 @@ void Arquivo::leArquivo(string fileName)
         c = f.Desenfileira();        
         c.Imprime();        
         cout << endl;
-    }        
+    }
+    
+    cout << "Dados Tratados:" << endl;
+    
+        
 } 
 

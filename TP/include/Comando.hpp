@@ -30,7 +30,6 @@ class Comando
         void Erro(char servidor);
         void Send();
         void Flush();
- 
 
     
     private:

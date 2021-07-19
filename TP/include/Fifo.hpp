@@ -7,7 +7,8 @@
 using namespace std;
 
 class Fifo
-{
+{    
+
     public:
         Fifo();
         virtual ~Fifo();
@@ -17,12 +18,11 @@ class Fifo
         void setMaxTam(int t);
         bool Vazia();
 
-        int getChave();
+        Celula* getFrente(){ return this->frente; }
         void setChave(int c);                    
 
         void Enfileira(Comando item);
-        Comando Desenfileira();
-        void Output();
+        Comando Desenfileira();    
         void Limpa();
             
     private:    
@@ -31,5 +31,4 @@ class Fifo
         Celula *frente;
         Celula *tras;
 };
-
 #endif
