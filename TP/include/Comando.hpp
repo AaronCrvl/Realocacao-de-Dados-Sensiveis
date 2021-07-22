@@ -11,17 +11,26 @@ typedef int Chave; // TipoChave é um inteiro
 class Comando
 {
     public:
-        Comando(){} //{ SetChave(-1); };
-        Comando(Chave c);
-
-        void SetChave(Chave c);
+        Comando(){} 
+        Comando(Chave c);        
+        //Retorna chave(posicao) do comando.
         Chave GetChave();
-
-        void setComando(string s);
+        //Retorna o dado(string) armazenado.               
         string getComando();
+        //Retorna o servidor especificado no comando.
+        int getServidor(); 
+        //Retorna um char que contém primeira letra do comando.
         char getIdentificador();
+        //Seta o valor da chave(posicao) do comando.
+        void SetChave(char c);
+        //Seta o servidor especificado no comando.
+        void setServidor(int c);        
+        //Seta o dado(string) pertencente ao comando INFO.        
+        void setComando(string s);                
+        //Seta o char que contém a primeira letra do comando.
         void setIdentificador();
-        void Imprime();        
+        //Imprime o comando.
+        void Imprime();       
 
         //Funções de Interesse:        
         void Info(char servidor, string dados);
@@ -30,14 +39,12 @@ class Comando
         void Erro(char servidor);
         void Send();
         void Flush();
-
     
     private:
         bool Executado = false;
         string comando;        
-        Chave chave;
-        char identificador;       
-                
-    // outros membros           
+        char chave = 'z';
+        char identificador; 
+        char servidor;                           
 };
 #endif

@@ -1,5 +1,6 @@
 #include "../include/Celula.hpp"
 #include "../include/Comando.hpp"
+#include "../include/Fifo.hpp"
 
 #include <string>
 #include <cstring>
@@ -7,35 +8,49 @@
 using namespace std;
 
 Celula::Celula()
-{
-    item.SetChave(-1);
+{    
     prox = NULL;
+    ant = NULL;
 }  
+
+void Celula::setChave(char c)
+{
+    this->chave = c;
+}
 
 void Celula::Executa()
 {
     char identificador = item.getIdentificador();
     string data = item.getComando(); 
+    int chave;
+    int serv;
     char servidor,servidor2, posicao;
     
     switch(identificador)
     {
-        case 'I':            
-            servidor = data[5];
+        case 'I':             
+            servidor = data[5];                        
+            item.setServidor(servidor);                                                                                            
             item.Info(servidor, data);        
         
         case 'W':
-            servidor = data[5];
-            posicao = data [7];
-            item.Warn(servidor, posicao);
+            servidor = data[5]; 
+            posicao = data [7];  
+            item.setServidor(servidor);                     
+            item.SetChave(posicao);             
+            //item.Warn(servidor, posicao);
         
         case 'T':
             servidor = data[5];
             servidor2 = data [7];
-            item.Tran(servidor, servidor2);
+            item.setServidor(servidor);            
+            item.SetChave(servidor2);             
+            //item.Tran(servidor, servidor2);
 
         case 'E':
             servidor = data[5];
+            item.setServidor(servidor);
+            item.SetChave(servidor); 
             item.Erro(servidor);      
 
         case 'S':

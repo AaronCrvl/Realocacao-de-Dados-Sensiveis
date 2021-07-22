@@ -26,16 +26,6 @@ int Fifo::getTamanho()
     return this->tamanho;
 }
 
-int Fifo::getMaxTam()
-{
-    return this->maxTam;
-}
-
-void Fifo::setMaxTam(int t)
-{
-    this->maxTam = t;
-}
-
 bool Fifo::Vazia()
 {
     if(tamanho == 0)
@@ -46,7 +36,12 @@ bool Fifo::Vazia()
     return 0;
 }
 
-void Fifo::setChave(int c)
+char Fifo::getChave()
+{
+    return this->chave;
+}
+
+void Fifo::setChave(char c)
 {
     this->chave = c;
 }
@@ -56,9 +51,10 @@ void Fifo::Enfileira(Comando item)
     Celula *nova;
     nova = new Celula();
     nova->item = item;
-    nova->item.setIdentificador();
-    tras->prox = nova;
-    tras = nova;
+    nova->item.setIdentificador();       
+    tras->prox = nova;     
+    nova->ant = tras;      
+    tras = nova;    
     tamanho++;
     nova->Executa();
 }
@@ -68,7 +64,7 @@ Comando Fifo::Desenfileira() {
     Comando aux;
 
     if (tamanho == 0)
-        throw "Fila está vazia!";
+        cout << "Fila está vazia!";
     
 
     aux = frente->prox->item;
@@ -95,3 +91,18 @@ void Fifo::Limpa()
     tamanho = 0;
     tras = frente;
 }
+
+void Fifo::Saida()
+{
+    Celula *c;
+    c = tras;        
+
+    while( c->ant != frente )
+    {
+        c->item.Imprime();        
+        c = c->ant;                
+    }
+    c->item.Imprime();
+    delete c;
+}
+

@@ -11,9 +11,20 @@ Comando::Comando(Chave c)
     chave = c;
 }
 
-void Comando::SetChave(Chave c)
+void Comando::SetChave(char c)
 {
-    chave = c;
+    int c_aux = (int)c-48;
+    chave = c_aux;
+}
+
+void Comando::setServidor(int c)
+{
+    this->servidor = c;
+}
+
+int Comando::getServidor()
+{
+    return this->servidor;
 }
 
 Chave Comando::GetChave()
@@ -23,7 +34,7 @@ Chave Comando::GetChave()
 
 void Comando::setComando(string s)
 {
-    this->comando = s;
+    this->comando = s;    
 }
 
 string Comando::getComando()
@@ -38,7 +49,7 @@ char Comando::getIdentificador()
 
 void Comando::Imprime()
 {
-    cout << this->comando;
+    cout << this->comando << endl;
 }
 
 void Comando::setIdentificador()
@@ -48,16 +59,11 @@ void Comando::setIdentificador()
 
 //Funções de Interesse:
 void Comando::Info(char servidor, string dados)
-{
-    // INFO 0 "NIVIO 00110100"
-    // NIVIO 00110100    
-    string T_dado;    
-    
+{   
+    string T_dado;           
     for(int i = 8; i <dados.size(); i++)
     {
-        if(dados[i] == '"')
-        {
-        }
+        if(dados[i] == '"'){}
         else
         {
             T_dado += dados[i];

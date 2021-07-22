@@ -1,5 +1,5 @@
 // cd Realocacao-de-Dados-Sensiveis\TP\src\
-// g++ -o p Main.cpp Fifo.cpp Comando.cpp Celula.cpp Arquivo.cpp
+// g++ -o p Main.cpp Fifo.cpp Comando.cpp Celula.cpp Arquivo.cpp Servidor.cpp
 
 #include "../include/Arquivo.hpp"
 

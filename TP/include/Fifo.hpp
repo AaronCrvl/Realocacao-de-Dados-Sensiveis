@@ -8,26 +8,29 @@ using namespace std;
 
 class Fifo
 {    
-
     public:
         Fifo();
         virtual ~Fifo();
-
-        int getTamanho();
-        int getMaxTam();        
-        void setMaxTam(int t);
-        bool Vazia();
-
-        Celula* getFrente(){ return this->frente; }
-        void setChave(int c);                    
-
-        void Enfileira(Comando item);
-        Comando Desenfileira();    
+        //Retorna o tamanho da fila encadeada.
+        int getTamanho();                     
+        // Retorna a chave da fila encadeda.
+        char getChave();     
+        //Seta a chave da fila encadeada.       
+        void setChave(char c);   
+        //Limpa todas as posições da fila encadeada.
         void Limpa();
-            
+        //Imrpime a fila encadeada da forma solicitada.
+        void Saida();                 
+        //Enfileira uma celula na fila.
+        void Enfileira(Comando item);
+        //Retorna se esta fila está vazia ou não(tamanho == 0).
+        bool Vazia(); 
+        //Desenfileira uma celula da fila.
+        Comando Desenfileira();            
+                             
     private:    
-        int maxTam,tamanho;
-        int chave;
+        int tamanho;
+        char chave = 'z';
         Celula *frente;
         Celula *tras;
 };
