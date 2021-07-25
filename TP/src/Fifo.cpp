@@ -64,8 +64,7 @@ Comando Fifo::Desenfileira() {
     Comando aux;
 
     if (tamanho == 0)
-        cout << "Fila está vazia!";
-    
+        cout << "Fila está vazia!";    
 
     aux = frente->prox->item;
     p = frente;
@@ -97,12 +96,11 @@ void Fifo::Saida()
     Celula *c;
     c = tras;        
 
-    while( c->ant != frente )
+    while( c->ant != frente->ant )
     {
         c->item.Imprime();        
         c = c->ant;                
     }
-    c->item.Imprime();
     delete c;
 }
 

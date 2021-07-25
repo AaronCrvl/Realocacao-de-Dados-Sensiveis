@@ -8,20 +8,16 @@ using namespace std;
 class Celula
 {    
     public:
+        //Construtor da classe
         Celula(); 
-        //Retorna a chave da célula.    
-        int getChave();
-        //Seta a chave da célula.        
-        void setChave(char c);   
+          
         //Faz a tratativa dos comandos INFO.
         //Agrega os identificadores, servidores e posições
         // conforme tipo de comando.
         void Executa();                          
         
-    private:
-        int servidor;
-        Comando item;
-        int chave=0;
+    private:        
+        Comando item;        
         Celula *prox;
         Celula *ant;       
 

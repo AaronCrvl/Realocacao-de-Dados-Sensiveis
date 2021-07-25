@@ -13,8 +13,10 @@ using namespace std;
 
 class Arquivo
 {
-    public:         
+    public: 
+        //Construtor da Classe        
         Arquivo(){} 
+        //Destrutor da Classe
         ~Arquivo(){} 
 
         //Lê o arquivo base.     

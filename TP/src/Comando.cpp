@@ -12,12 +12,11 @@ Comando::Comando(Chave c)
 }
 
 void Comando::SetChave(char c)
-{
-    int c_aux = (int)c-48;
-    chave = c_aux;
+{    
+    this->chave = c;
 }
 
-void Comando::setServidor(int c)
+void Comando::setServidor(char c)
 {
     this->servidor = c;
 }
@@ -27,9 +26,9 @@ int Comando::getServidor()
     return this->servidor;
 }
 
-Chave Comando::GetChave()
+int Comando::GetChave()
 {
-    return chave;
+    return this->chave;
 }
 
 void Comando::setComando(string s)
@@ -57,7 +56,6 @@ void Comando::setIdentificador()
     identificador = comando[0];
 }
 
-//Funções de Interesse:
 void Comando::Info(char servidor, string dados)
 {   
     string T_dado;           
@@ -75,6 +73,3 @@ void Comando::Info(char servidor, string dados)
 
 void Comando::Warn(char servidor, int posicao){}
 void Comando::Tran(char servidor1, char servidor2){}
-void Comando::Erro(char servidor){}
-void Comando::Send(){}
-void Comando::Flush(){}

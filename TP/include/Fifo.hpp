@@ -9,7 +9,9 @@ using namespace std;
 class Fifo
 {    
     public:
+        //Construtor da classe
         Fifo();
+        //Destrutor virtual da classe;
         virtual ~Fifo();
         //Retorna o tamanho da fila encadeada.
         int getTamanho();                     

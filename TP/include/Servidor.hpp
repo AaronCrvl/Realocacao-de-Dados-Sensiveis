@@ -22,13 +22,14 @@ class Servidor
         void limpaBuffer();
         //Retorna o tamanho atual do buffer.
         int getTamanho(){return this->tamanho;}
-
-        //Funções de Interesse:
-        void Warn(int pos);
-        void Tran();
+        //Esta função limpa o buffer na posição indicada.
+        void LimpaPos(int pos);        
+        //Seta a primeira posição do buffer com a posição indica no parâmetro.
+        void Warn(string dado);        
 
     private:                    
-        string buffer[15];        
-        int tamanho;       
+        //string *buffer;
+        string buffer[30];        
+        int tamanho=0;       
 };  
 #endif 
