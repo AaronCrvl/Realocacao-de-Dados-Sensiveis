@@ -86,7 +86,7 @@ Desta forma, temos que a complexidade final de n-qtdINFO para FIFO1, n-qtdNAOINF
 O(n) + O(n) = 2O(n) = O(n)
  
 
-5 – Conclusão
+5 – Conclusão: 
 Após iniciar a implementação do trabalho pode se notar que não somente será necessário fazer a criação de uma fila, mas também instâncias de estruturas que representam os servidores, pois uma fila de comandos qualquer pode ter comandos de n servidores.
  
 A primeira parte implementada foi a estrutura que ficaria responsável pela leitura do arquivo, esta é muito importante pois a partir de uma leitura correta as informações seriam distribuídas na segunda parte da implementação. 
