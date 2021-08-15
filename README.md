@@ -4,6 +4,8 @@ Realocação Interplanetária 2076 - Aaron de Carvalho Balbino - Universidade Fe
 
 Contato: carvalhosins@ufmg.br
 
+(Versão via resumo textual sem imagens ilustrativas)
+
 1.	Introdução:
 Esta documentação tem como objetivo realizar a descrição do Trabalho Prático 1, que tem a finalidade criar um sistema que representasse um grupo de servidores capazes de fazer transferências de consciência através da mega-net. Dada uma quantidade especificada de servidores, estes deveriam recolher não só dados mas também comandos respectivos a tratativa, envio, transição de informações de consciências internamente e também possíveis invasões ao sistema, a formulação deste será detalhada no tópico 2(Implementação).
 
