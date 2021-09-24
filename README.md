@@ -1,4 +1,4 @@
-TAD's - Estrutura de Dados
+# TAD FILA - Estrutura de Dados
 
 Realocação Interplanetária 2076 - Aaron de Carvalho Balbino - Universidade Federal de Minas Gerais (UFMG) - Belo Horizonte – MG –Brasil 
 
@@ -6,10 +6,10 @@ Contato: carvalhosins@ufmg.br
 
 (Versão via resumo textual sem imagens ilustrativas)
 
-1.	Introdução:
+## 1.	Introdução:
 Esta documentação tem como objetivo realizar a descrição do Trabalho Prático 1, que tem a finalidade criar um sistema que representasse um grupo de servidores capazes de fazer transferências de consciência através da mega-net. Dada uma quantidade especificada de servidores, estes deveriam recolher não só dados mas também comandos respectivos a tratativa, envio, transição de informações de consciências internamente e também possíveis invasões ao sistema, a formulação deste será detalhada no tópico 2(Implementação).
 
-2.	Implementacão:
+## 2.	Implementacão:
 O programa foi desenvolvido na linguagem C++, compilada pelo compilador G++ da GNU Compiler Collection.
 
 2.1	– Estrutura de Dados:
@@ -35,11 +35,11 @@ Para modularização do sistema foram usadas 4 classes principais, segue esta e 
 O sistema ainda conta com uma quarta classe chamada ARQUIVO que se encarrega estritamente da funções de leitura do arquivo e envio destes para a fila. Um breve esquema de organização pode ser verificado abaixo:
 
 
-3 – Instruções de Compilação e Execução
+## 3 – Instruções de Compilação e Execução
 
 3.1 – O programa, após compilado, pede que seja inserido o nome do arquivo “.txt” que será lido, este arquivo deve estar dentro da pasta src, sendo assim, digitar no terminal este nome sem adicionar o “.txt” ao final, conforme imagem abaixo:
 
-4 – Análise de Complexidade
+## 4 – Análise de Complexidade
 OBS: Internamente na fila, temos um duplo encadeamento entre as células(CELULA) que se comporta como a TAD lista duplamente encadeada, para esta, foi feita a tabela a seguir para conferência das complexidades gerais, as principais funcionalidades usadas foram caminhamento para impressão, sendo assim T(n) = O(n):
   
 
@@ -88,7 +88,7 @@ Desta forma, temos que a complexidade final de n-qtdINFO para FIFO1, n-qtdNAOINF
 O(n) + O(n) = 2O(n) = O(n)
  
 
-5 – Conclusão: 
+## 5 – Conclusão: 
 Após iniciar a implementação do trabalho pode se notar que não somente será necessário fazer a criação de uma fila, mas também instâncias de estruturas que representam os servidores, pois uma fila de comandos qualquer pode ter comandos de n servidores.
  
 A primeira parte implementada foi a estrutura que ficaria responsável pela leitura do arquivo, esta é muito importante pois a partir de uma leitura correta as informações seriam distribuídas na segunda parte da implementação. 
